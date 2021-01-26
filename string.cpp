@@ -95,9 +95,6 @@ String& String::operator=(const String &rhs) {
  */
 
 bool String::equals(const String &rhs) const {
-    // if(&rhs == NULL){
-    //     return false;
-    // }
     int result = strcmp(rhs.data,this->data);
     if(result==0){
         return true;
@@ -169,17 +166,8 @@ void String::split(const char *delimiters, String **output,
         counter++;
     }
 
-
     String *new_out = new String[counter];
-    //*output =new String[counter];
     *size = counter;
-    /*
-   for(int i=0;i<counter;i++){
-
-       *(new_out+i) =  String();
-
-    }
-     */
   *output=new_out;
 
 
